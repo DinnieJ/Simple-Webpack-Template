@@ -1,14 +1,9 @@
-@mixin three-block-title-font {
+@mixin three-block-font {
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif; 
     font-size: 30px; 
     font-weight: 400; 
     line-height: 32px;
-}
-
-@mixin three-block-para-font {
-    @include three-block-title-font; 
-    font-size: 20px;
 }
 
 @mixin under-three-block-head-font {

@@ -1,7 +1,18 @@
 .clearfix {
-    &:after {
-      display: table;
-      content: '';
-      clear: both;
-    }
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
   }
+}
+
+
+
+.arrow-down {
+  margin-left: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+
+  border-top: 8px solid #fff;
+  display: inline-block;
+}

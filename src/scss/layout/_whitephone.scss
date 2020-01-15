@@ -1,0 +1,48 @@
+
+.white-phone {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 100px 300px 0 100px;
+    background-image: url('~images/gray-bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 200px;
+
+    &__img {
+        display: inline-block;
+        margin: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        &__head-text {
+            margin-bottom: 50px;
+            width: 100%;
+
+            &__title {
+                @include under-three-block-head-font
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &__content-box {
+                width: 50%;
+                box-sizing: border-box;
+                padding:10px;
+                &__icon {
+                    color: $primary-color
+                }
+            }
+        }
+    }
+}

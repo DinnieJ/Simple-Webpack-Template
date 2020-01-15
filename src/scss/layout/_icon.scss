@@ -1,0 +1,12 @@
+//////////////////spinning cog css//////////////////////////
+.spinning-cog {
+    background-color: $primary-color;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .cog {
+        color: #ffffff;
+    }
+}

@@ -2,34 +2,22 @@
 .header {
     position: relative;
     margin: auto;
-    //////////////////spinning cog css//////////////////////////
-    .spinning-cog {
-        background-color: $priColor;
-        display:inline-block;
-        position: absolute;
-        top:50%;
-        transform:translateY(-50%);
-        .cog {
-            color: #ffffff;
-            animation:spin 4s linear infinite;
-        }
-    }
-    @keyframes spin {100% {transform:rotate(360deg); }}
+    background-color: $primary-color;
+
     //////////////////////////fox-icon//////////////////////////////
     .fox-icon {
         display: inline-block;
-        background-color:$priColor;
+        background-color: $primary-color;
         position: absolute;
-        top:50%;
-        left:5%;
-        transform:translateY(-50%);
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
     }
-
     //////////////////////////////////////////////////////////////
     .nav {
         font-size: 0;
         float: right;
-        > .nav-item {
+        &__item {
             display: inline-block;
             color: #ffffff;
             text-align: center;
@@ -37,60 +25,41 @@
             font-size: 16px;
             border-bottom: 3px solid transparent;
             position: relative;
+            cursor: pointer;
 
-            .arrow-down {
-                margin-left: 4px;
-                border-left: 4px solid transparent;
-                border-right: 4px solid transparent;
-                
-                border-top: 8px solid #fff;
-                display: inline-block;
-            }
-
-            &:after{
+            &:after {
                 content: '';
                 display: block;
                 transform: scaleX(0);
                 border-bottom: solid 3px #fff;
                 transition: transform .3s ease-in-out;
-                position: absolute;    
+                position: absolute;
                 width: 100%;
-                top:100%;
-                left:0;    
+                top: 100%;
+                left: 0;
             }
-        
-            &:hover:after{
-                //transform: scaleX(1);
-                animation: expand .4s forwards;
+
+            &:hover:after {
+                transform: scaleX(1);
             }
-            @keyframes expand {
-                10% {transform: scaleX(1.5);}
-                30% {transform: scaleX(0.5)}
-                50% {transform: scaleX(1);}
-                100%{transform: scaleX(0.85);}
-            }
-            
-    
-            .nav-link {
-                color:#fff;
+
+            &__link {
+                color: #fff;
             }
         }
     }
-    
-    
-    
+
+
+
     .dropdown {
         // position: relative;
-    
-        &:hover .drop-content{
+
+        &:hover .drop-content {
             display: block;
             animation: fade-in .4s forwards;
         }
-        @keyframes fade-in {
-            0% {opacity: 0;top: calc(100% + 33px);}
-            100% {opacity: 1;top: calc(100% + 3px);}
-        }
     }
+
     .drop-content {
         display: none;
         position: absolute;
@@ -98,35 +67,34 @@
         opacity: 0;
         min-width: 150px;
         text-align: left;
-        margin:0;
+        margin: 0;
         top: calc(100% + 3px);
-        left:0;
-        padding: 0;
+        left: 0;
         z-index: 1;
-        box-shadow: 0 4px 26px 9px rgba(57,148,140,1);
-        list-style-type: none;
-    
+        box-shadow: 0 4px 26px 9px rgba(57, 148, 140, 1);
+
         .drop-item .drop-link {
             color: #000;
             padding: 18px 16px;
             display: block;
         }
-    
+
         & .drop-item:hover .drop-link {
-            animation: fade-color-dropdown 0.3s forwards;
             color: #ffffff;
-        }
-        @keyframes fade-color-dropdown {
-            0% {background-color: #00cdcd00;}
-            100% {background-color: #00cdcdff;}
+            background-color: $primary-color;
         }
     }
 }
 
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        top: calc(100% + 33px);
+    }
 
-
-
-
-
-
+    100% {
+        opacity: 1;
+        top: calc(100% + 3px);
+    }
+}
