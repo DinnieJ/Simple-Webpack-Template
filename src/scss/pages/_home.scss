@@ -19,29 +19,28 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    .succeed__left{
+    &__left{
         display: table;
         margin:auto 0;
         //position: relative;
         //margin-right: 200px;
-        width: 30%;
-        .succeed__head-paragraph {
-            color:#fff
-        }
-
-        .succeed__big-word {
-            @include under-three-block-head-font;
-            font-size:90px;
-            color:#fff;
-        }
-
-        .succeed__paragraph {
-            color:#fff;
-        }
-        
+        width: 30%; 
+    }
+    &__head-paragraph {
+        color:#fff
     }
 
-    .succeed__right {
+    &__big-word {
+        @include under-three-block-head-font;
+        font-size:90px;
+        color:#fff;
+    }
+
+    &__paragraph {
+        color:#fff;
+    }
+
+    &__right {
         display: inline-block;
     }
     
@@ -53,7 +52,7 @@
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    & .card {
+    .card {
         display: inline-block;  
         box-sizing: content-box;
         background-color:$priColor;
@@ -66,6 +65,7 @@
 
         &:hover {
             box-shadow: 1px 4px 26px 9px #00acac;
+            //border-bottom: 3px solid $blockHover;
             z-index: 1;
         }
         &::after {
