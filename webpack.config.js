@@ -7,6 +7,9 @@ var OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var TerserJSPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    writeToDisk: true
+  },
   resolve: {
     modules: ['node_modules'],
     alias: {
@@ -51,8 +54,8 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
-          'postcss-loader'
+          'postcss-loader',
+          'sass-loader'
         ]
       },
       {
@@ -61,7 +64,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-                outputPath: 'images'
+              outputPath: 'images',
+              esModule: false
             }
           }
         ]
@@ -70,12 +74,18 @@ module.exports = {
         test: /\.(woff|woff2|ttf|otf|eot)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
               outputPath: 'fonts'
             }
           }
         ]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader'
+        }
       }
     ]
   },

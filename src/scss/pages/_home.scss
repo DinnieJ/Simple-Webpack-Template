@@ -1,31 +1,88 @@
+.main-button {
+    background-color: #fff;
+    padding:15px 45px;
+    border-radius: 50px;
+    border: none;
+    color:$priColor;
+
+    &:hover {
+        animation: fade-color-button .3s forwards;
+    }
+
+    @keyframes fade-color-button {
+        0% {background-color: #fff; color:$priColor}
+        100% {background-color: $blockHover; color:#fff}
+    }
+}
+
+.succeed {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .succeed__left{
+        display: table;
+        margin:auto 0;
+        //position: relative;
+        //margin-right: 200px;
+        width: 30%;
+        .succeed__head-paragraph {
+            color:#fff
+        }
+
+        .succeed__big-word {
+            @include under-three-block-head-font;
+            font-size:90px;
+            color:#fff;
+        }
+
+        .succeed__paragraph {
+            color:#fff;
+        }
+        
+    }
+
+    .succeed__right {
+        display: inline-block;
+    }
+    
+}
+
 
 .three-block {
     display: flex;
     justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
     & .card {
         display: inline-block;  
-        box-sizing: border-box;
-        background-color: #00cdcd;
-        width: 400px;
-        height: 370px;
+        box-sizing: content-box;
+        background-color:$priColor;
         margin: 20px;
         text-align: center;
         padding: 20px 50px 20px 50px;
         position: relative;
         border-bottom: 3px solid transparent;
+        z-index: 0;
+
+        &:hover {
+            box-shadow: 1px 4px 26px 9px #00acac;
+            z-index: 1;
+        }
         &::after {
             content: '';
             display: block;
-            border-bottom: 3px solid #fad36f;
+            border-bottom: 3px solid $blockHover;
             transform: scaleX(0);
             transition: transform .3s ease-in-out;
             position: absolute;    
-            width: 100%;
+            //width: 100%;
             top:100%;
-            left:0;    
+            left:0;
+            
         }
         &:hover::after {
             transform: scaleX(1);
+            
             
         }
         .icon {
@@ -38,20 +95,84 @@
         }
 
         .title {
-            color: #fff;
+            @include three-block-title-font 
         }
 
         .paragraph {
-            color: #fff;
-            font-size: 24px;
+            @include three-block-para-font
         }
 
         &:hover {
             .icon {
-                color: #fad36f;
+                color: $blockHover;
             }
+        }
+        
+        &:first-child{
+            margin-left: 300px;
+        }
+
+        &:last-child{
+            margin-right: 300px;
         }
 
         
+    }
+}
+
+.under-three-block {
+    display: flex;
+    justify-content: center;
+    padding: 100px 300px 0 100px;
+    //position: relative;
+    background-image: url('~images/gray-bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-bottom: 200px;
+
+    .img-phone {
+        display: inline-block;
+        margin: auto;
+        
+    }
+
+    .content {
+        display: inline-block;
+        margin-left: 5em;
+        width: 50%;
+        .head-text {
+            margin-bottom: 50px;
+            width:100%;
+            .title {
+                @include under-three-block-head-font
+            }
+        }
+        .wrapper {
+            display: flex;
+            justify-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            .row-wrapper {
+                display: inline-block;
+                width: 50%;
+                .content-box {
+                    display: inline-block;
+                    width: 80%;
+                    margin:40px;
+                    .icon { 
+                        color: $priColor
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                &:first-child .content-box {
+                    padding-right: 0;
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
