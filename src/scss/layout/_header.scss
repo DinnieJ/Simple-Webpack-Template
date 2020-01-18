@@ -1,0 +1,33 @@
+.header {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  @include side-padding(50px);
+
+  &__title {
+    font-size: 24px;
+    line-height: 68px;
+    color: $header-text-color;
+  }
+
+  &__nav {
+    &__item {
+      display: inline-block;
+      padding:10px 30px 10px 30px;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: $header-text-color;
+
+      &--dropdown {
+        position: relative;
+        color: $primary-color;
+        &:hover .dropdown {
+          display: block;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
