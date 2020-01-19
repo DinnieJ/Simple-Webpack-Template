@@ -2,17 +2,13 @@
     text-align: center;
     margin: auto;
     flex-wrap: nowrap;
-    padding-bottom: 100px;
-
-    &__title {
-        margin: 0 auto 28px auto; 
-    }
-    &__content {
-        max-width: 47.5%;
-        margin: 0 auto 28px auto;
-    }
+    padding-bottom: 101px;
 
     &__logos {
-        padding: 0 78px 0 78px;
+        margin: 59px 78px 0 78px;
+    }
+
+    &__image {
+        margin: 5px;
     }
 }

@@ -1,33 +1,47 @@
 .bulletin {
-    @include side-padding(45px);
+    @include side-padding(25px);
+    padding-bottom: 100px;
     &__content {
         width: 45%;
         margin: 0 20px 0 20px;
-        &__title {
-            margin-bottom: 25px;
-        }
+    }
 
-        &__paragraph {
-            margin-bottom: 25px;
-        }
-        &__check {
-            margin-bottom: 15px;
-            &::before {
-                content: "\F058";
-                font-family: 'Font Awesome 5 Free';
-                color: #2ECA8B;
-                margin-right: 3px;
-                font-weight: 900;
-            }
-        }
+    &__title {
+        margin-bottom: 25px;
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
 
-        &__more {
-            color:$primary-color !important;
-            &:hover, &:active {
-                color: #0056B3 !important;
-            }
+    &__paragraph {
+        margin-bottom: 25px;
+        font-size: 15px;
+        color: $paragraph-color;
+        line-height: 26px;
+    }
+    &__check {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 22px;
+        color: $paragraph-color;
+        &::before {
+            content: "\F058";
+            font-family: 'Font Awesome 5 Free';
+            color: #2ECA8B;
+            margin-right: 14px;
+            font-weight: 900;
+            font-size: 18px;
         }
     }
+
+    &__more {
+        color:$primary-color !important;
+        &:hover, &:active {
+            color: #0056B3 !important;
+        }
+    }
+    
     &__image {
         width: 45%;
         margin: 0 20px 0 20px;

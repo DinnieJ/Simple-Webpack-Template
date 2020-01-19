@@ -2,67 +2,72 @@
     background-color: #202942;
     color: #ADB5BD;
     &__content {
-        margin: 0 20px 0 20px;
+        margin: 0 16px 0 16px;
         &:first-child {
-            padding-left: 30px;
+            padding-left: 45px;
             margin-left: 0;
         }
 
         &:last-child {
-            padding-right: 30px;
+            padding-right: 45px;
             margin-right: 0;
         }
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 60px;
+        padding-bottom: 60px;
         max-width: 400px;
+    }
 
-        &__title {
-            font-size: 24px;
-            line-height: 36px;
-            letter-spacing: 1px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
+    &__title {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
 
-        &__list {
-            &__item {
-                margin-bottom: 5px;
-                &::before {
-                    content: "\203A \00A0";
-                }
-            }
-        }   
+    &__list {
+        list-style-type: '\203A \00A0';
+        
+    }
 
-        &__email {
-            background: #25304E;
-            border: 1px solid #25304E;
+    &__item {
+        margin-bottom: 5px;
+    }
 
-            padding: 10px 0 10px 0;
-            margin-bottom: 10px;
-            caret-color: #ADB5BD;
-            color: #fff;
-            width: 100%;
+    &__email {
+        background: #25304E;
+        border: 1px solid #25304E;
 
-            &::placeholder {
-                color:#fff;
-                opacity: 0.8;
-            }
-        }
+        padding: 10px 0 10px 0;
+        margin-bottom: 10px;
+        caret-color: #ADB5BD;
+        color: #fff;
+        width: 100%;
 
-        &__btn {
-            width: 100%;
+        &::placeholder {
+            color:#fff;
+            opacity: 0.8;
         }
     }
 
-    &__under {
-        padding: 30px 50px 30px 50px;
-        align-items: center;
+    &__write {
+        font-size: 14px;
+        line-height: 22px;
+        padding-top: 15px;
+    }
 
-        &__payment {
-            display: inherit;
-            >img {
-                margin: 3px;
-            }
-        }
+    &__btn {
+        width: 100%;
+    }
+
+    &__under {
+        padding: 30px 45px 36px 45px;
+        align-items: center;
+    }
+
+    &__icon {
+        width:37px;
+        height: 25px;
+        margin: 0px 2px 0px 2px;
     }
 }

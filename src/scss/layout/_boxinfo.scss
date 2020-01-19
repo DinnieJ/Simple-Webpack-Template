@@ -1,5 +1,5 @@
 .boxinfo {
-    padding: 100px 60px 200px 60px;
+    padding: 99px 60px 197px 60px;
 
     &__box {
         margin: 0 40px 0 40px;
@@ -10,14 +10,22 @@
         &:last-child {
             margin-right: 0;
         }
+    }
 
-        &__title {
-            margin-bottom: 10px;
-        }
+    &__title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
 
-        &__icon {
-            width: 60px;
-            height: 60px;
-        }
+    &__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__content {
+        color: $paragraph-color;
     }
 }

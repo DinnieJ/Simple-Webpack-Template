@@ -1,17 +1,8 @@
 body {
-  background-color: #fff;
-  position: relative;
-  margin: 0;
-  font-family: Nunito;
-  //For correct page width by design
-  max-width: 1200px;
-  margin:auto;
-
-}
-
-html {
   background-color: #E5E5E5;
+  margin: 0;
 }
+
 
 ul {
   margin: 0;
@@ -26,7 +17,7 @@ a, a:visited, a:hover, a:active {
   color: inherit;
 }
 
-.input[type="text"],button {
+input[type="text"], button {
   outline: none;
 }
 
