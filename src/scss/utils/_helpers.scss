@@ -24,22 +24,26 @@
   &--center-row {
     justify-content: center;
   }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--center-item {
+    align-items: center;
+  }
 }
 
 .d-inline {
   display: inline-block;
 }
 
-.font-14 {
-  font-size: 14px;
-}
-
-.font-16 {
-  font-size: 16px;
-}
-
-.color-red {
+.red {
   color:#E43F52;
+}
+
+.gray {
+  color:#8492A6;
 }
 
 .pri-color {
@@ -48,6 +52,18 @@
 
 .font-bold {
   font-weight: bold;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.center-content {
+  margin:auto;
+}
+
+.space-bottom {
+  margin-bottom: 20px;
 }
 
 .input-with-icon {
@@ -73,7 +89,7 @@
   height:1px;
   width: 100%;
 
-  &--grey {
+  &--gray {
     background-color: #DEE2E6;
   }
 }

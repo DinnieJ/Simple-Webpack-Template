@@ -1,0 +1,35 @@
+.bulletin {
+    @include side-padding(45px);
+    &__content {
+        width: 45%;
+        margin: 0 20px 0 20px;
+        &__title {
+            margin-bottom: 25px;
+        }
+
+        &__paragraph {
+            margin-bottom: 25px;
+        }
+        &__check {
+            margin-bottom: 15px;
+            &::before {
+                content: "\F058";
+                font-family: 'Font Awesome 5 Free';
+                color: #2ECA8B;
+                margin-right: 3px;
+                font-weight: 900;
+            }
+        }
+
+        &__more {
+            color:$primary-color !important;
+            &:hover, &:active {
+                color: #0056B3 !important;
+            }
+        }
+    }
+    &__image {
+        width: 45%;
+        margin: 0 20px 0 20px;
+    }
+}

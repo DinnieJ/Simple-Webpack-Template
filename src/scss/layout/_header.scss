@@ -1,7 +1,5 @@
 .header {
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   @include side-padding(50px);
 
   &__title {

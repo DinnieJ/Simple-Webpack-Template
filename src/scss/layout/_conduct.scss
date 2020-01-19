@@ -1,0 +1,21 @@
+.conduct {
+    text-align: center;
+    padding-top: 122px;
+    padding-bottom: 39px;
+    &__title {
+        max-width: 80%;
+        margin: 0 auto 18px auto;
+    }
+
+    &__content {
+        max-width: 47.5%;
+        margin: 0 auto 28px auto;
+    }
+
+    &__button {
+        margin: auto;
+        margin-bottom: 60px;
+    }
+
+
+}
