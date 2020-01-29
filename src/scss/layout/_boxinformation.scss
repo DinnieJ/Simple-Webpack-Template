@@ -1,0 +1,74 @@
+.box-information {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__card {
+        display: inline-block;
+        box-sizing: content-box;
+        background-color: $primary-color;
+        margin: 20px;
+        text-align: center;
+        padding: 20px 50px 20px 50px;
+        position: relative;
+        border-bottom: 3px solid transparent;
+        z-index: 0;
+
+        &:hover {
+            border-bottom: 3px solid $block-hover;
+        }
+
+        &:hover &__icon {
+            color: $block-hover;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            border-bottom: 3px solid $block-hover;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+
+        &__icon {
+            content: '';
+            padding: 0.6em;
+            background-color: #fff;
+            border-radius: 50%;
+            color: #000;
+            transition: 0.2s;
+        }
+
+        &__title {
+            @include three-block-font;
+        }
+
+        &__paragraph {
+            @include three-block-font;
+            font-size:20px;
+        }
+
+        &:hover {
+            .icon {
+                color: $block-hover;
+            }
+        }
+
+        &:first-child {
+            margin-left: 300px;
+        }
+
+        &:last-child {
+            margin-right: 300px;
+        }
+    }
+}

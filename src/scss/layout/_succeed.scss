@@ -1,0 +1,37 @@
+.succeed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $primary-color;
+    position: relative;
+    &__left {
+        margin: auto 30px;
+        color:#fff;
+        width: 30%;
+        z-index: 1;
+    }
+
+    &__right {
+        z-index: 2;
+    }
+
+
+    &__big-word {
+        @include under-three-block-head-font;
+        font-size: 90px;
+    }
+    
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 0;
+        border-right: 100vw solid #fff;
+        border-top: 200px solid transparent;
+        width: 0;
+        z-index: 1;
+    }
+}
+
