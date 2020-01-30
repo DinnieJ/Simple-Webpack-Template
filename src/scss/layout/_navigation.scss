@@ -1,0 +1,22 @@
+.nav {
+  background-color: $dark-navbar-color;
+  //position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  &bar {
+    display: flex;
+    justify-content: flex-end;
+    
+
+    &__item {
+      margin: 20px 20px 0 20px;
+      font-size: 25px;
+      font-weight: normal;
+      color: #fff;
+    }
+
+    &__link {
+      padding:0 20px 20px 20px;
+    }
+  }
+}

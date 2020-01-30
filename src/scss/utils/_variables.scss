@@ -1,1 +1,44 @@
-$primary: #00cdcd;
+
+$dark-bg-color: #151515;
+$dark-navbar-color: #000000;
+$dark-sidebar-color: #3C4042;
+$dark-clock-color: #303030;
+$dark-clock-weather: #252525;
+$dark-text-color--primary: #FFFFFF;
+
+
+//weather image source
+
+$weather-img-source :(
+    thunderstorm : (
+        image: 'thunderstorm-weather.jpg'
+    ),
+
+    drizzle: (
+        image: 'drizzle-weather.jpg'
+    )
+
+    rain: (
+        image: 'rain-weather.jpg'
+    ),
+
+    clear: (
+        image: 'clear-weather.jpg'
+    )
+
+);
+
+$button-colors : (
+    primary: (
+        color: #fff,
+        bg-color: $primary-color,
+        bg-color-hover: #2443AC,
+        border-color: #2f55d4,
+    ),
+    default: (
+        color: $primary-color,
+        bg-color: #fff, 
+        bg-color-hover: #2f55d4,
+        border-color: #2f55d4,
+    ),
+);

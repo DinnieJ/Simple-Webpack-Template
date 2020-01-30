@@ -12,10 +12,15 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import 'base/reset';
 @import 'base/typography';
 
+@import 'components/sidebar';
+@import 'components/right-menu';
+@import 'components/main';
+
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/footer';
+@import 'layout/container';
 
 @import 'pages/home';
 @import 'pages/about';

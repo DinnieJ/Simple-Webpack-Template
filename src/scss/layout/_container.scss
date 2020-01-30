@@ -1,0 +1,7 @@
+.container {
+    transition: margin-left .5s;
+
+    &__slide {
+        margin-left: 250px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="#" class="sidebar__link">About</a>
+    <a href="#" class="sidebar__link">Services</a>
+    <a href="#" class="sidebar__link">Clients</a>
+    <a href="#" class="sidebar__link">Contact</a>
+  </div>
+  <div class="right-menu">
+    <a href="https://fb.com" class="right-menu__item right-menu__item--facebook"><span class="right-menu__title">Facebook</span></a>
+    <a href="https://youtube.com" class="right-menu__item right-menu__item--youtube"><span class="right-menu__title">Youtube</span></a>
+    <a href="https://google.com" class="right-menu__item right-menu__item--google"><span class="right-menu__title">Google</span></a>
+    <a href="https://gmail.com" class="right-menu__item right-menu__item--gmail"><span class="right-menu__title">Gmail</span></a>
+    <a href="https://instagram.com" class="right-menu__item right-menu__item--instagram"><span class="right-menu__title">Instagram</span></a>
+    <a href="https://stackoverflow.com" class="right-menu__item right-menu__item--stackoverflow"><span class="right-menu__title">Stackoverflow</span></a>
+</div>
+  <div class="container">
+    <header class="header">
+      <nav class="nav clearfix">
+        <ul class="navbar">
+          <li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#">Email</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main" class="main">
+      <div class="currentday">
+        <div class="currentday__placetime">
+          <p id="time" class="currentday__time"></p>
+          <div class="currentday__location">
+            <i class="fas fa-map-marker-alt currentday__icon"></i>
+            <p id="location" class="currentday__address"></p>
+          </div>
+        </div>
+        <div class="currentday__weather currentday__weather--rain">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

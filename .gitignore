@@ -1,2 +1,7 @@
 dist
 node_modules
+.firebase*
+y
+public
+database.rules.json
+firebase.json
