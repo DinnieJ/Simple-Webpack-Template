@@ -1,0 +1,65 @@
+.review {
+    padding: 100px 50px 100px 50px;
+    &__content {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    &__user {
+        margin: 0px 15px 0 15px;
+    }
+
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        margin-right: 8px;
+    }
+
+    &__box {
+        background-color: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 6px #B2B2B2;
+        
+        width:  302px;
+        margin-left: 8px;
+        position: relative;
+        padding: 24px 31px 24px 16px;
+
+        &::after {
+            background-color: #fff;
+            box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+            content: "";
+            display: block;
+            height: 18px;
+            width:  18px;
+            left: -9px;
+            position: absolute;
+            top: 20px;
+            transform: rotate( 45deg );
+        }
+    }
+
+    &__stars {
+        padding-bottom: 15px;
+    }
+
+    &__line {
+        padding-bottom: 13px;
+        font-size: 15px;
+        line-height: 26px;
+        color: $paragraph-color;
+    }
+
+    &__sign {
+        font-size: 13px;
+        line-height: 22px;
+        color: $paragraph-color;
+    }
+
+    &__user-name {
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary-color;
+    }
+}

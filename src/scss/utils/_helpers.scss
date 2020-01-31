@@ -1,0 +1,158 @@
+.clearfix {
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inherit {
+  display: inherit;
+}
+
+.d-flex {
+  display: flex;
+
+  &--space-around {
+    justify-content: space-around;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--center-row {
+    justify-content: center;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--center-item {
+    align-items: center;
+  }
+
+  &--align-flex-start {
+    align-items: flex-start;
+  }
+
+  &--direction-row {
+    flex-direction: row;
+  }
+
+  &--justify-start {
+    justify-content: flex-start;
+  }
+}
+
+.d-inline {
+  display: inline;
+
+  &--flex {
+    display: inline-flex;
+  }
+  
+  &--block {
+    display: inline-block;
+  }
+}
+
+.red {
+  color:#E43F52;
+}
+
+.gray {
+  color:#8492A6;
+}
+
+.span-link {
+  color: $primary-color;
+}
+
+.center-content {
+  margin:auto;
+}
+
+.space-bottom {
+  margin-bottom: 20px;
+}
+
+.input-with-icon {
+  position: relative;
+  margin: 8px 0;
+  box-sizing: border-box;
+  &__icon {
+    position: absolute;
+    left: 0;
+    top:-2px;
+    padding: 9px 8px;
+    font-size: 1.5em;
+  }
+
+  &__field {
+    text-indent: 3em;
+    border-radius: 10px;
+  }
+}
+
+.line-break {
+  background-color:#fff;
+  height:1px;
+  width: 100%;
+
+  &--gray {
+    background-color: #DEE2E6;
+  }
+}
+
+.content-title {
+  max-width: 80%;
+  padding-bottom: 23px;
+  margin:auto;
+  color: $title-color;
+  font-weight: normal;
+  font-size: normal;
+  &--big {
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    padding-bottom: 18px;
+  }
+
+  &--normal {
+    font-size: 35px;
+    letter-spacing: 0.8px;
+    line-height: 52px;
+  }
+
+  &--small {
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 45px;
+  }
+}
+
+.content-paragraph {
+  max-width: 47.5%;
+  margin:auto;
+  padding-bottom: 18px;
+  color: $paragraph-color;
+}
+
+.demo-content {
+  color: $paragraph-color;
+
+  &__item {
+      display: inline-block;
+      text-align: left;
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 2px 0 2px;
+      max-width: 389px;
+    }
+}

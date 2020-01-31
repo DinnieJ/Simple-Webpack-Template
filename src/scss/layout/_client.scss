@@ -1,0 +1,14 @@
+.client {
+    text-align: center;
+    margin: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 101px;
+
+    &__logos {
+        margin: 59px 78px 0 78px;
+    }
+
+    &__image {
+        margin: 5px;
+    }
+}

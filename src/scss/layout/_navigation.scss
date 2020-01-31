@@ -1,0 +1,27 @@
+.nav {
+    font-size: 13px;
+    line-height: 24px;
+    &__item {
+      display: inline-block;
+      padding:10px 30px 10px 30px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      color: $header-text-color;
+
+      &--dropdown {
+        position: relative;
+        
+        &:hover{
+          color:$primary-color;
+          .dropdown {
+            display: block;
+            z-index: 1;
+            
+            &__icon {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
