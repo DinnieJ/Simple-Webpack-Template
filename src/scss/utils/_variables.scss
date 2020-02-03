@@ -1,44 +1,39 @@
-
 $dark-bg-color: #151515;
 $dark-navbar-color: #000000;
-$dark-sidebar-color: #3C4042;
+$dark-sidebar-color: #3c4042;
 $dark-clock-color: #303030;
-$dark-clock-weather: #252525;
-$dark-text-color--primary: #FFFFFF;
-
+$dark-weather-color: #252525;
+$dark-text-color--primary: #ffffff;
 
 //weather image source
 
-$weather-img-source :(
-    thunderstorm : (
-        image: 'thunderstorm-weather.jpg'
-    ),
-
-    drizzle: (
-        image: 'drizzle-weather.jpg'
-    )
-
-    rain: (
-        image: 'rain-weather.jpg'
-    ),
-
-    clear: (
-        image: 'clear-weather.jpg'
-    )
-
-);
-
-$button-colors : (
-    primary: (
-        color: #fff,
-        bg-color: $primary-color,
-        bg-color-hover: #2443AC,
-        border-color: #2f55d4,
-    ),
-    default: (
-        color: $primary-color,
-        bg-color: #fff, 
-        bg-color-hover: #2f55d4,
-        border-color: #2f55d4,
-    ),
+$weather-img-source: (
+  thunderstorm: (
+    image: "thunderstorm-weather.jpg",
+    icon : 'f0e7'
+  ),
+  drizzle: (
+    image: "drizzle-weather.jpg",
+    icon: 'f73d'
+  ),
+  rain: (
+    image: "rain-weather.jpg",
+    icon: 'f740'
+  ),
+  snow: (
+    image: "snowy-weather.jpg",
+    icon: 'f2dc'
+  ),
+  mist: (
+    image: "mist-weather.jpg",
+    icon: 'f75f'
+  ),
+  clear: (
+    image: "clear-weather.jpg",
+    icon: 'f185'
+  ),
+  cloudy: (
+    image: "cloudy-weather.jpeg",
+    icon: 'f0c2'
+  )
 );

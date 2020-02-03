@@ -2,8 +2,8 @@
     height: 300px;
     width: 100%;
     display: flex;
+
     &__placetime {
-        display: inline-block;
         color: #fff;
         width: 35%;
         text-align: center;
@@ -40,25 +40,56 @@
 
     //weather box
     &__weather {
-        display: inline-block;
         width: 65%;
-        background-color: $dark-clock-weather;
+        background-color: $dark-weather-color;
         box-sizing: border-box;
         padding: 10px 30px;
         background-repeat: no-repeat;
-        background-position: bottom left;
+        background-position: center center;
         background-size: cover;
+        position: relative;
 
-        &--clear {
-            background-image: url('~images/weather/clear-weather.jpg');
+        @each $key,
+        $values in $weather-img-source {
+            &--#{$key} {
+                background-image: url('~images/weather/#{map-get($values , "image")}');
+                
+                .currentday__weathericon {
+                    &::before {
+                        content: icon(#{map-get($values,'icon')});
+                    }
+                }
+            }
         }
 
-        &--rain {
-            background-image: url('~images/weather/rain-weather.jpg');
+        &box {
+            display: flex;
+            box-sizing: border-box;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            color: #fff;
+            padding: 10px 30px;
+            position: absolute;
+            width: calc(100% - 60px);
+            top: 50%;
+            transform: translateY(-50%);
+
+            &__left {
+                width: 50%;
+            }
+
+            &__right {
+                width: 50%;
+            }
         }
 
-        &--thunderstorm {
-            background-image: url('~images/weather/thunderstorm-weather.jpg');
+        &icon {
+            font-size: 30px;
+            &::before {
+                font-family: 'Font Awesome 5 Free';
+                font-size: 60px;
+                font-weight: 900;
+                margin-right: 20px;
+            }
         }
     }
 }

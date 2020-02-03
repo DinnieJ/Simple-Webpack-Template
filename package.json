@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --open",
     "build:dev": "webpack --mode development --config webpack.config.js",
     "build:production": "webpack --mode production --config webpack.config.js",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "heroku-prebuild": "npm install --dev"
   },
   "dependencies": {},
   "devDependencies": {
@@ -29,5 +30,16 @@
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
-  }
+  },
+  "description": "This project was generated with:",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DinnieJ/Landrick.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/DinnieJ/Landrick/issues"
+  },
+  "homepage": "https://github.com/DinnieJ/Landrick#readme"
 }

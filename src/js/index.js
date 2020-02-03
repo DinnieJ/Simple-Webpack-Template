@@ -20,6 +20,10 @@ var query = $(document).ready(function() {
     if (m < 10) {
       m = "0" + m;
     }
+
+    if(h < 10) {
+      h = "0" + h;
+    }
     $("#time").text(`${h}:${m}:${s}`);
   }
 
@@ -65,6 +69,10 @@ var load = $(window).on("load", function(event) {
         break;
     }
   }
+
+  function convertKtoC(kelvin) {
+    return Math.round(kelvin - 273.15);
+  }
   
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -79,7 +87,7 @@ var load = $(window).on("load", function(event) {
           $('#location').text(location);
         },
         error: function () {
-
+          $('#location').text("Something went wrong !");
         }
       })
 
@@ -90,6 +98,28 @@ var load = $(window).on("load", function(event) {
         async: true,
         success: function(response) {
           console.log(response);
+          let weather = response.weather[0];
+          let main = response.main;
+          if (weather.id >= 200 && weather.id < 300) {
+            $('#weather').addClass('currentday__weather--thunderstorm');
+          } else if (weather.id >= 300 && weather.id < 500) {
+            $('#weather').addClass('currentday__weather--drizzle');
+          } else if (weather.id >= 500 && weather.id < 600) {
+            $('#weather').addClass('currentday__weather--rain');
+          } else if (weather.id >= 600 && weather.id < 800) {
+            $('#weather').addClass('currentday__weather--mist');
+          } else if (weather.id == 800) {
+            $('#weather').addClass('currentday__weather--clear');
+          } else if (weather.id > 800) {
+            $('#weather').addClass('currentday__weather--cloudy');
+          }
+
+          $('#temperature').text(`Temperature: ${convertKtoC(main.temp)}°C`);
+          $('#feellike').text(`Feels like: ${convertKtoC(main.feels_like)}°C`);
+          $('#weathermain').text(weather.main);
+          $('#temp_min').text(`${convertKtoC(main.temp_min)}°C/${convertKtoC(main.temp_max)}°C`);
+          $('#humidity').text(`Humidity: ${main.humidity}%`);
+          $('#description').text(`Description: ${weather.description}`);
         },
         error: function(error) {
           console.log(error);
