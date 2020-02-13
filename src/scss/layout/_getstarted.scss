@@ -1,0 +1,15 @@
+.getstarted {
+    background-color: $primary-color;
+    padding: 127px 47px 147px 47px;
+    &__title {
+        color: #fff;
+        font-size: 31px;
+        line-height: 38px;
+        margin-bottom: 53px;
+    }
+
+    &__content {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 22px;
+    }
+}

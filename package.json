@@ -9,13 +9,18 @@
     "build:production": "webpack --mode production --config webpack.config.js",
     "watch": "webpack --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "autoprefixer": "^9.7.3",
+    "bootstrap": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.1",
     "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",

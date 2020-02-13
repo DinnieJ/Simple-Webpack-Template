@@ -1,0 +1,40 @@
+.intro {
+    &__container {
+        text-align: center;
+        padding: 159px 63px 88px 63px;
+        background-image: url("~images/Rectangle.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: inherit;
+    }
+  &__content {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 46px;
+
+  }
+
+  &__title {
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 53px;
+    position: relative;
+    font-size: 36px;
+    line-height: 43px;
+    text-transform: uppercase;
+  }
+
+  @include respond-above('md') {
+    &__title {
+      font-size: 48px;
+      line-height: 58px;
+    }
+
+    &__content {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}

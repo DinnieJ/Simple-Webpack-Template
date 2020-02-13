@@ -1,0 +1,10 @@
+.footer {
+    padding: 47px 0;
+    background-color: $footer-color;
+
+    &__copyright {
+        color : $copyright-text-color;
+        font-size: 12px;
+        line-height: 19px;
+    }
+}

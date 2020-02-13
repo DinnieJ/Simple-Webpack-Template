@@ -1,0 +1,31 @@
+.clearfix {
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+.title-underline {
+  position: relative;
+  &::after {
+    
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 3.19px;
+    left: 50%;
+    bottom: -20.81px;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 52px;
+  }
+
+  &--primary {
+    &::after {background-color: $primary-color;}
+  }
+
+  &--secondary {
+    &::after {background-color: $secondary-color;}
+  }
+}
