@@ -1,0 +1,12 @@
+.download {
+    background-color: $download-bg-color;
+    padding : 127px 110px 147px 110px;
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 38px;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+}

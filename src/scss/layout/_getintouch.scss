@@ -1,0 +1,35 @@
+.getintouch {
+    padding: 127px 43px;
+    &__title {
+        font-size: 31px;
+        line-height: 38px;
+        color: $title-primary-color;
+        margin-bottom: 53px;
+    }
+
+    &__para {
+        color: #6C757D;
+        margin-bottom: 18px;
+    }
+
+
+    &__info {
+        margin: 32px auto;
+    }
+    &__icon {
+        font-size: 48px;
+        color: #6C757D;
+        margin-bottom: 10px;
+    }
+
+    &__email {
+        color: $primary-color;
+        &:hover, &:active {
+            color: $primary-color;
+        }
+    }
+
+    @include respond-above('md') {
+        padding: 127px 204px;
+    }
+}

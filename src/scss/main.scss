@@ -1,4 +1,6 @@
+
 @import '~bootstrap/scss/bootstrap';
+
 
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
@@ -6,10 +8,11 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 
+@import 'utils/mixins';
 @import 'utils/variables';
 @import 'utils/functions';
 @import 'utils/helpers';
-@import 'utils/mixins';
+
 
 @import 'base/reset';
 @import 'base/typography';
@@ -21,3 +24,6 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 
 @import 'pages/home';
 @import 'pages/about';
+@import 'pages/index';
+
+@import 'utils/bootstrap_reset';
